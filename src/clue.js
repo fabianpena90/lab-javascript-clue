@@ -161,14 +161,7 @@ function pickMystery() {
   }
 }
 
-function revealMystery(killer) {
-  let fName = killer.suspect.first_name;
-  let lName = killer.suspect.last_name;
-  let weapon = killer.weapon.name;
-  let room = killer.weapon.name;
+function revealMystery({suspect,weapon,room}){
   
-  return `${fName} ${lName} Killed Mr. Boddy using the ${weapon} in the ${room}!`
+  return  `${suspect.firstName} ${suspect.lastName} killed Mr. Boddy using the ${weapon.name} in the ${room.name}!`
 }
-
-/*should return a string
-should return "<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!"*/
